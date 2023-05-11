@@ -107,7 +107,7 @@ After clicking on the Connect button, you can see the tables in the database.
 
 What does h2 look like after running the project?
 
-![1](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/dbe66ccb-4394-4cc3-a3fc-3040d927c0ef)
+![image](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/35b86e00-51df-4e75-89f0-1eee8392d80d)
 
 These are the tables created:
 
