@@ -4,6 +4,49 @@
 This system includes a partial server side, and a database for a corona database management system for a large health fund.
 The system will present the members in the health insurance fund, and will manage the entry of the records in a database. In addition, the system will store key information regarding the corona epidemic in the context of the members of the health fund. In the future, they will be able to turn to this database in order to carry out various retrievals.
 
+## Tech Stack
+
+**Client:** Postman
+
+**Server:** Java
+
+**Database:** h2   (url: http://localhost:8080/h2-console)
+
+## Installation
+
+**Prerequisites**:
+
+Java 8 or higher
+
+Maven 3.0 or higher
+
+Spring Boot 2.5.0 or higher
+
+**1.** Clone the repository:
+????????????????????????????????????????
+```bash
+  git clone https://github.com/<username>/<repository>.git
+
+```
+
+**2.** go to URL http://localhost:8080/h2-console
+
+**3.** Open SpringBootH2DatabaseExampleApplication java file and run it as Java Application
+
+**4.** Download the Postman from https://www.getpostman.com/downloads/
+
+Launch the Postman and Signup. Create a user name.
+
+**5.** Open the Postman and do the following:
+
+    1. Select the POST or GET
+    2. Invoke the URL http://localhost:8080/the api you choosed....
+**6.** Connect to h2: 
+
+Open the browser and invoke the URL http://localhost:8080/h2-console. Click on the Connect button.
+
+After clicking on the Connect button, you can see the tables in the database.
+
 ## API Reference
 
 #### Returns a list of all members in the system
@@ -67,49 +110,36 @@ The system will present the members in the health insurance fund, and will manag
 ```
 ## Screenshots
 
-??????????????????????????????????????
-## Tech Stack
+What does h2 look like after running the project?
 
-**Client:** Postman
+![1](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/dbe66ccb-4394-4cc3-a3fc-3040d927c0ef)
 
-**Server:** Java
+These are the tables created:
 
-**Database:** h2   (url: http://localhost:8080/h2-console)
+![11](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/97581717-b019-48ca-9c68-cc5942cc62ce)
 
-## Installation
+now, go to Postman and run the various API commands:
 
-**Prerequisites**:
+![2](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/0bae1eb2-35fb-4809-acd9-e109d44c032f)
 
-Java 8 or higher
+![3](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/55e1f89f-f152-438a-b409-c84a29fab1a8)
 
-Maven 3.0 or higher
+![4](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/5ca75bed-7351-465f-ba0f-9cd7c8f0388f)
 
-Spring Boot 2.5.0 or higher
+![5](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/996a3158-cbf4-49cf-824a-d06e76a15398)
 
-**1.** Clone the repository:
-????????????????????????????????????????
-```bash
-  git clone https://github.com/<username>/<repository>.git
+![6](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/e5ad1fbd-86b8-4c30-a50f-96d875530f4e)
 
-```
+Note that the image you upload is located in:  C:\Users\User\Postman\files
+![7](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/29e8eb47-1188-4a55-ae18-b54e49971646)
 
-**2.** go to URL http://localhost:8080/h2-console
+![8](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/4aecd4d2-a9d2-4344-9b78-ef72dee88326)
 
-**3.** Open SpringBootH2DatabaseExampleApplication java file and run it as Java Application
+![9](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/8b949f6b-3abf-4941-9634-4e1a55fd9528)
 
-**4.** Download the Postman from https://www.getpostman.com/downloads/
+![10](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/08437f26-fe61-48bb-9d16-b471e15244d8)
 
-Launch the Postman and Signup. Create a user name.
 
-**5.** Open the Postman and do the following:
-
-    1. Select the POST or GET
-    2. Invoke the URL http://localhost:8080/the api you choosed....
-**6.** Connect to h2: 
-
-Open the browser and invoke the URL http://localhost:8080/h2-console. Click on the Connect button.
-
-After clicking on the Connect button, you can see the tables in the database.
 
     
 ## Links that directed me
