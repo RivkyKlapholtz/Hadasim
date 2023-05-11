@@ -69,6 +69,7 @@ public class MemberController {
 
     @PostMapping("/member/{id}/corona")
     private String saveCorona(@RequestBody Corona corona, @PathVariable("id") String id) {
+        validationCorona(corona);
         Member m = memberService.getMemberById(id);
         m.setCorona(corona);
         return "";
@@ -76,15 +77,12 @@ public class MemberController {
 
     @PostMapping("/member/{id}/vaccine")
     private String saveCorona(@RequestBody Vaccine vaccine, @PathVariable("id") String id) {
-        String message = "";
         Member m = memberService.getMemberById(id);
         if (m.getVaccines().size() == 4)
             throw new IllegalArgumentException("Maximum 4 vaccinations per person, ");
-        message = validationVaccine(vaccine);
-        if (!message.equals(""))
-            throw new IllegalArgumentException(message);
+        validationVaccine(vaccine);
         m.getVaccines().add(vaccine);
-        return message;
+        return "";
     }
 
     @PostMapping("/uploading-image/{id}")
@@ -164,36 +162,39 @@ public class MemberController {
         if (mem.getCellPhone() != null && (mem.getCellPhone().length() != 10 || isNotDigitOnly(mem.getCellPhone())))
             message += "Invalid cell-phone number, ";
         //8
-        message += validationListVaccine(mem.getVaccines());
+        validationListVaccine(mem.getVaccines());
         //10
-        message += validationCorona(mem.getCorona());
+        validationCorona(mem.getCorona());
         if (!StringUtils.isEmpty(message))
             throw new IllegalArgumentException(message);
 
     }
 
-    private String validationVaccine(Vaccine v) {
+    private void validationVaccine(Vaccine v) {
         String message = "";
         if (!v.getManufacturer().toString().equals("Novavax") && !v.getManufacturer().toString().equals("Pfizer") && !v.getManufacturer().toString().equals("AstraZeneca") && !v.getManufacturer().toString().equals("Modern"))
             message += v.getManufacturer().toString() + " is not one of these: Pfizer, Modern ,AstraZeneca, Novavax, ";
-        return message;
+        if (!StringUtils.isEmpty(message))
+            throw new IllegalArgumentException(message);
     }
 
-    private String validationListVaccine(List<Vaccine> vac) {
+    private void validationListVaccine(List<Vaccine> vac) {
         String message = "";
         for (Vaccine v : vac) {
-            message += validationVaccine(v);
+            validationVaccine(v);
         }
         if (vac.size() > 4)
             message += "Maximum 4 vaccinations per person, ";
-        return message;
+        if (!StringUtils.isEmpty(message))
+            throw new IllegalArgumentException(message);
     }
 
     private String validationCorona(Corona cor) {
         String message = "";
         if (cor.getRecoveryDate().before(cor.getRecoveryDate()))
             message += "The date of recovery should be after the date of receiving the positive result, ";
-        return message;
+        if (!StringUtils.isEmpty(message))
+            throw new IllegalArgumentException(message);
     }
 
     private boolean isNotLetterOnly(String str) {
