@@ -22,7 +22,7 @@ Maven 3.0 or higher
 
 Spring Boot 2.5.0 or higher
 
-**1.** Clone the repository https://github.com/RivkyKlapholtz/Hadasim/edit/main/q2/partA
+**1.** Clone the repository [https://github.com/RivkyKlapholtz/Hadasim/edit/main/q2/part](https://github.com/RivkyKlapholtz/Hadasim/tree/main/q2/partA/HMO)A
 
 **2.** Go to URL http://localhost:8080/h2-console
 
