@@ -111,7 +111,7 @@ What does h2 look like after running the project?
 
 These are the tables created:
 
-![11](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/97581717-b019-48ca-9c68-cc5942cc62ce)
+![image](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/7b8f2b89-f8bb-4c6e-8daa-ad03fa06455b)
 
 now, go to Postman and run the various API commands:
 
