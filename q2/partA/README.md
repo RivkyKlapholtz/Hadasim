@@ -22,9 +22,9 @@ Maven 3.0 or higher
 
 Spring Boot 2.5.0 or higher
 
-**1.** Clone the repository
+**1.** Clone the repository https://github.com/RivkyKlapholtz/Hadasim/edit/main/q2/partA
 
-**2.** go to URL http://localhost:8080/h2-console
+**2.** Go to URL http://localhost:8080/h2-console
 
 **3.** Open SpringBootH2DatabaseExampleApplication java file and run it as Java Application
 
@@ -125,7 +125,8 @@ now, go to Postman and run the various API commands:
 
 ![6](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/e5ad1fbd-86b8-4c30-a50f-96d875530f4e)
 
-Note that the image you upload is located in:  C:\Users\User\Postman\files
+(!) Note that the image you upload is located in:  C:\Users\User\Postman\files
+
 ![7](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/29e8eb47-1188-4a55-ae18-b54e49971646)
 
 ![8](https://github.com/RivkyKlapholtz/Hadasim/assets/129298796/4aecd4d2-a9d2-4344-9b78-ef72dee88326)
