@@ -169,6 +169,7 @@ public class MemberController {
         message += validationListVaccine(mem.getVaccines());
         //10
         message += validationCorona(mem.getCorona());
+        if(String)
         return message;
     }
 
